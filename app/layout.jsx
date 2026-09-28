@@ -1,16 +1,12 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Oswald } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const oswald = Oswald({
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: ["400", "600", "700"],
+  variable: "--font-oswald",
 });
 
 export const metadata = {
@@ -24,7 +20,7 @@ export default function RootLayout({ children }) {
       lang="en"
       
     >
-      <body className="bg-neutral-950 text-white">
+      <body className= {`${oswald.variable} bg-neutral-950 text-white`}>
 
         <Navbar></Navbar>
         
