@@ -4,7 +4,7 @@ import Banner from "@/public/assets/banner.png";
 const Hero = () => {
   return (
     <section className="px-4 sm:px-6 mb-12">
-      <div className="mx-auto mt-12 flex max-w-7xl flex-col items-center gap-8 rounded-2xl bg-[#222630] p-6 md:flex-row md:justify-between md:p-10">
+      <div className="mx-auto mt-12 flex max-w-7xl flex-col items-center gap-8 rounded-2xl bg-[#222630] p-6 md:flex-row md:justify-between py-4 sm:px-6 ">
         {/* Left: text */}
         <div className="">
           <p className="font-bold text-[#C2F800]">WORKOUT LIBRARY</p>
