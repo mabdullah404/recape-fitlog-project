@@ -2,6 +2,7 @@ import { Oswald } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
+import { WorkoutListsProvider } from "./components/layout/WorkoutListsProvider";
 
 const oswald = Oswald({
   subsets: ["latin"],
@@ -22,13 +23,11 @@ export default function RootLayout({ children }) {
     >
       <body className= {`${oswald.variable} bg-neutral-950 text-white`}>
 
-        <Navbar></Navbar>
-        
-        <main>
-          {children}
-        </main>
-
-        <Footer></Footer>
+        <WorkoutListsProvider>
+          <Navbar />
+          <main>{children}</main>
+          <Footer />
+        </WorkoutListsProvider>
         
         </body>
     </html>

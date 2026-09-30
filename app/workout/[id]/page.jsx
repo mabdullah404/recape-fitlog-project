@@ -1,4 +1,5 @@
 import Image from "next/image";
+import WorkoutActions from "../../components/workout/WorkoutActions";
 
 const WorkoutDetailsPage = async ({ params }) => {
   const { id } = await params;
@@ -140,17 +141,7 @@ const WorkoutDetailsPage = async ({ params }) => {
           </div>
 
           {/* ================= BUTTONS ================= */}
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-
-            <button className="flex-1 rounded-full bg-lime-400 py-3 font-semibold text-black transition-colors hover:bg-lime-300">
-              + Add to today&apos;s plan
-            </button>
-
-            <button className="flex-1 rounded-full border border-zinc-700 py-3 font-semibold text-white transition-colors hover:border-lime-400 hover:text-lime-400">
-              🔖 Save for later
-            </button>
-
-          </div>
+          <WorkoutActions workout={workout} />
 
         </div>
       </div>
